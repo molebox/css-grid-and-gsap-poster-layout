@@ -6,6 +6,7 @@
           box-sizing: border-box;
 }
 
+/* load font */
 @font-face {
   font-family: 'berthold_akzidenz_grotesk_bRg';
   src: url("./font/berthold-akzidenz-grotesk-be-medium-webfont.woff2") format("woff2"), url("./font/berthold-akzidenz-grotesk-be-medium-webfont.woff") format("woff");
@@ -20,13 +21,15 @@
   margin: 0 auto;
   background-color: #5ebd44;
   font-family: 'berthold_akzidenz_grotesk_bRg';
+  overflow: hidden;
 }
 
 .main-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100px 150px 1fr;
-      grid-template-rows: 100px 150px 1fr;
+  -ms-grid-rows: 50px 1fr 1fr;
+      grid-template-rows: 50px 1fr 1fr;
+  height: 100%;
 }
 
 .info-section {
@@ -88,7 +91,7 @@
 .title-section .title {
   -ms-grid-column: 1;
   grid-column: 1;
-  font-size: 9em;
+  font-size: 10em;
   font-weight: 500;
   letter-spacing: 3px;
 }
@@ -105,11 +108,33 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1em;
-  font-size: 1.2em;
-  font-weight: 200;
+  font-size: 1.3em;
+  font-weight: 100;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   height: 150px;
+  margin-top: 1em;
+}
+
+.circles-grid {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[11];
+      grid-template-columns: repeat(11, 1fr);
+  -ms-grid-rows: (1fr)[11];
+      grid-template-rows: repeat(11, 1fr);
+  place-items: center;
+  background-color: black;
+  min-height: 800px;
+}
+
+.circles-grid .circle {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  background-color: #5ebd44;
 }
 /*# sourceMappingURL=index.css.map */
