@@ -33,19 +33,22 @@ circles.forEach((circle, index) => {
 // animate the intro text down from the top
 TL.from(".info-section", {
     y: window.innerHeight * -1,
-    duration: 0.8
+    duration: 1.5,
+    ease: 'elastic.out(1, 1)'
 })
 
 // animate the title in from the left
 TL.from(".title", {
     x: window.innerWidth * -1,
-    duration: 0.8
+    duration: 1.5,
+    ease: 'elastic.out(1, 1)'
 });
 
 // animate the subtitle in from the right
 TL.from(".subtitle", {
     x: window.innerWidth * 1,
-    duration: 0.8
+    duration: 1.5,
+    ease: 'elastic.out(1, 1)'
 })
 
 // gentle opacity animation of the grid background
