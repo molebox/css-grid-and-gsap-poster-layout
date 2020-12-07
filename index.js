@@ -42,14 +42,14 @@ TL.from(".title", {
     x: window.innerWidth * -1,
     duration: 1.5,
     ease: 'elastic.out(1, 1)'
-});
+}, "-=1");
 
 // animate the subtitle in from the right
 TL.from(".subtitle", {
     x: window.innerWidth * 1,
     duration: 1.5,
     ease: 'elastic.out(1, 1)'
-})
+}, "-=1")
 
 // gentle opacity animation of the grid background
 TL.from(".circles-grid", {
@@ -66,6 +66,6 @@ TL.from(".circle", {
     stagger: {
         grid: [11, 11],
         from: 'random',
-        amount: 1
+        amount: 1.5
     }
 }, "-=1")
