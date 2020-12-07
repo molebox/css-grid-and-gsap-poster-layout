@@ -26,14 +26,12 @@ circles.forEach((circle, index) => {
             circle.classList.add('white-circle')
         }
     }
+    // add the circle to the grid
     circleGrid.append(circle)
 })
 
-TL.from(".section-left", {
-    y: window.innerHeight * -1,
-    duration: 0.8
-});
-TL.from(".section-right", {
+// animate the intro text down from the top
+TL.from(".info-section", {
     y: window.innerHeight * -1,
     duration: 0.8
 })
