@@ -6,10 +6,15 @@
           box-sizing: border-box;
 }
 
+:root {
+  --white-color: #dee2d5;
+  --green-color: #5ebd44;
+}
+
 /* load font */
 @font-face {
   font-family: 'berthold_akzidenz_grotesk_bRg';
-  src: url("./font/berthold-akzidenz-grotesk-be-medium-webfont.woff2") format("woff2"), url("./font/berthold-akzidenz-grotesk-be-medium-webfont.woff") format("woff");
+  src: url("../font/berthold-akzidenz-grotesk-be-medium-webfont.woff2") format("woff2"), url("../font/berthold-akzidenz-grotesk-be-medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,7 +24,7 @@
   max-width: 21cm;
   height: 100vh;
   margin: 0 auto;
-  background-color: #5ebd44;
+  background-color: var(--green-color);
   font-family: 'berthold_akzidenz_grotesk_bRg';
   overflow: hidden;
 }
@@ -27,9 +32,8 @@
 .main-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 50px 1fr 1fr;
-      grid-template-rows: 50px 1fr 1fr;
-  height: 100%;
+  -ms-grid-rows: 50px 200px 1fr;
+      grid-template-rows: 50px 200px 1fr;
 }
 
 .info-section {
@@ -99,7 +103,7 @@
 .title-section .subtitle {
   -ms-grid-column: 3;
   grid-column: 3;
-  color: #dae2d2;
+  color: var(--white-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,28 +128,33 @@
   display: grid;
   -ms-grid-columns: (1fr)[11];
       grid-template-columns: repeat(11, 1fr);
-  -ms-grid-rows: (70px)[11];
-      grid-template-rows: repeat(11, 70px);
+  -ms-grid-rows: (65px)[11];
+      grid-template-rows: repeat(11, 65px);
   place-items: center;
   background-color: black;
   min-width: 23.5cm;
   position: relative;
   left: -5.25%;
+  /* when we add this to the circle class it will override the bg-color */
 }
 
 .circles-grid:before {
   content: '';
   width: 100%;
   height: 20px;
-  background-color: #5ebd44;
+  background-color: var(--green-color);
   position: absolute;
   top: 0;
 }
 
 .circles-grid .circle {
   border-radius: 50%;
-  width: 65px;
-  height: 65px;
-  background-color: #5ebd44;
+  width: 60px;
+  height: 60px;
+  background-color: var(--green-color);
+}
+
+.circles-grid .white-circle {
+  background-color: var(--white-color);
 }
 /*# sourceMappingURL=index.css.map */

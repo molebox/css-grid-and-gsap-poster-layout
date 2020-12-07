@@ -5,11 +5,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --white-color: #dee2d5;
+    --green-color: #5ebd44;
+}
+
 /* load font */
 @font-face {
     font-family: 'berthold_akzidenz_grotesk_bRg';
-    src: url('./font/berthold-akzidenz-grotesk-be-medium-webfont.woff2') format('woff2'),
-         url('./font/berthold-akzidenz-grotesk-be-medium-webfont.woff') format('woff');
+    src: url('../font/berthold-akzidenz-grotesk-be-medium-webfont.woff2') format('woff2'),
+         url('../font/berthold-akzidenz-grotesk-be-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -20,15 +25,15 @@
     height: 100vh;
     margin: 0 auto;
 
-    background-color: #5ebd44;
+    background-color: var(--green-color);
     font-family: 'berthold_akzidenz_grotesk_bRg';
     overflow: hidden;
 }
 
 .main-grid {
     display: grid;
-    grid-template-rows: 50px 1fr 1fr;
-    height: 100%;
+    grid-template-rows: 50px 200px 1fr;
+
 }
 
 .info-section {
@@ -73,7 +78,7 @@
     }
     .subtitle {
         grid-column: 3;
-        color: #dae2d2;
+        color: var(--white-color);
         display: flex;
         flex-direction: column;
         padding: 1em;
@@ -89,7 +94,7 @@
     grid-row: 3;
     display: grid;
     grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(11, 70px);
+    grid-template-rows: repeat(11, 65px);
     place-items: center;
     background-color: black;
     min-width: 23.5cm;
@@ -101,15 +106,19 @@
         content: '';
         width: 100%;
         height: 20px;
-        background-color: #5ebd44;
+        background-color: var(--green-color);
         position: absolute;
         top: 0;
     }
 
     .circle {
         border-radius: 50%;
-        width: 65px;
-        height: 65px;
-        background-color: #5ebd44;
+        width: 60px;
+        height: 60px;
+        background-color: var(--green-color);
+    }
+    /* when we add this to the circle class it will override the bg-color */
+    .white-circle {
+        background-color:  var(--white-color);
     }
 }
