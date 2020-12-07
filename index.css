@@ -1,10 +1,115 @@
 /* global reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.outer-container {
-    
+@font-face {
+  font-family: 'berthold_akzidenz_grotesk_bRg';
+  src: url("./font/berthold-akzidenz-grotesk-be-medium-webfont.woff2") format("woff2"), url("./font/berthold-akzidenz-grotesk-be-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
+
+/* set this to the dimensions of an A4 sheet of paper */
+.outer-container {
+  max-width: 21cm;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #5ebd44;
+  font-family: 'berthold_akzidenz_grotesk_bRg';
+}
+
+.main-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100px 150px 1fr;
+      grid-template-rows: 100px 150px 1fr;
+}
+
+.info-section {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px auto 250px;
+      grid-template-columns: 200px auto 250px;
+  padding: 1em;
+}
+
+.info-section p {
+  font-size: 0.8em;
+}
+
+.info-section .section-left {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+}
+
+.info-section .section-right {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+}
+
+.title-section {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 400px auto 250px;
+      grid-template-columns: 400px auto 250px;
+  -ms-grid-rows: 200px;
+      grid-template-rows: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  height: 100%;
+}
+
+.title-section .title {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  font-size: 9em;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.title-section .subtitle {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  color: #dae2d2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+  font-size: 1.2em;
+  font-weight: 200;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 150px;
+}
+/*# sourceMappingURL=index.css.map */

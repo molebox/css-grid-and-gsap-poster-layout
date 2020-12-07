@@ -1,0 +1,82 @@
+/* global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'berthold_akzidenz_grotesk_bRg';
+    src: url('./font/berthold-akzidenz-grotesk-be-medium-webfont.woff2') format('woff2'),
+         url('./font/berthold-akzidenz-grotesk-be-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* set this to the dimensions of an A4 sheet of paper */
+.outer-container {
+    max-width: 21cm;
+    height: 100vh;
+    margin: 0 auto;
+
+    background-color: #5ebd44;
+    font-family: 'berthold_akzidenz_grotesk_bRg';
+}
+
+.main-grid {
+    display: grid;
+    grid-template-rows: 100px 150px 1fr;
+}
+
+.info-section {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 200px auto 250px;
+    padding: 1em;
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .section-left {
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+    .section-right {
+        grid-column: 3;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+}
+
+.title-section {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 400px auto 250px;
+    grid-template-rows: 200px;
+    align-items: center;
+    padding: 1em;
+    height: 100%;
+
+    .title {
+        grid-column: 1;
+        font-size: 9em;
+        font-weight: 500;
+        letter-spacing: 3px;
+
+    }
+    .subtitle {
+        grid-column: 3;
+        color: #dae2d2;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        font-size: 1.2em;
+        font-weight: 200;
+        justify-content: space-evenly;
+        height: 150px;
+    }
+}
